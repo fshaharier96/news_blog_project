@@ -2,7 +2,7 @@
 include_once "../classes/Register.php";
 $reg=new Register();
 $result=$reg->getPost();
-if($result){
+
 
 
 ?>
@@ -41,6 +41,7 @@ include 'admin_header.php';
             </thead>
             <tbody>
                 <?php
+                if($result){
                 while($row=mysqli_fetch_assoc($result)){
                     
                 
