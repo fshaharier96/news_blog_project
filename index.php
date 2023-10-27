@@ -111,29 +111,12 @@ if($result)
 
         <!-- sidebar container starts -->
         <div class="index-sidebar-container">
-            <div class="index-search-container"> 
-                <h3>
-                    Search Post
-                </h3>
-                <div class="index-search-input-box">
-                    <input type="text" name="index-search" placeholder="search..">
-                    <button>search</button>
-                </div>
-
-            </div>
-            <div class="index-sidebar">
-                <div class="index-sidebar-item">
-                    <div class="index-sidebar-item-image">
-                        <img src="images/news_image.jpg" alt="sidebar-image">
-                    </div>
-                    <div class="index-sidebar-item-content">
-                           <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error </h4>
-                            <div>Date</div>
-                            <button>Read more</button>
-                    </div>
-                </div>
-
-            </div>
+        <?php 
+            include_once 'sidebar_search.php';
+         ?>
+             <?php 
+            include_once 'sidebar_post.php';
+             ?>
         </div>
         <!-- sidebar container ends -->
 

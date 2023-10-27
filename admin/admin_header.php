@@ -1,6 +1,6 @@
 <div class="admin-header-upper-container">
     <h2>Contemp News portal</h2>
-    <a href="#">Logout</a>
+    <a href="logout.php">Logout</a>
 </div>
 <div class="admin-header-menu-container">
     <ul class="admin-header-list-container">

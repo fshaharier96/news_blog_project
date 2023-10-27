@@ -27,6 +27,18 @@
         $result=$db->select($sql);
         return $result;
       }
+      public function show4($search_term){
+        $sql="SELECT pt.post_id,pt.post_title,pt.post_description,pt.post_image,pt.post_date,ct.category_name,lt.first_name,lt.last_name FROM post_table pt INNER JOIN login_table lt on pt.author=lt.id INNER JOIN category ct on pt.post_category=ct.category_id WHERE pt.post_title LIKE '%{$search_term}%' OR ct.category_name LIKE '%{$search_term}%'";
+            $db=new Database();
+            $result=$db->select($sql);
+            return $result;
+      }
+      public function show5(){
+        $sql="SELECT pt.post_id,pt.post_title,pt.post_description,pt.post_image,pt.post_date,ct.category_name,lt.first_name,lt.last_name FROM post_table pt INNER JOIN login_table lt on pt.author=lt.id INNER JOIN category ct on pt.post_category=ct.category_id LIMIT 3";
+            $db=new Database();
+            $result=$db->select($sql);
+            return $result;
+      }
   }
 
 ?>

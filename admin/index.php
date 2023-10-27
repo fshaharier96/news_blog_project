@@ -48,7 +48,7 @@
                                                 $_SESSION['role']=$row['user_role'];
                                             }
                                            
-                                            header("Location:$host/post.php");
+                                            header("Location:{$host}post.php");
                                         }else{
                                             echo "<div style='width:330px;margin-top:8px' class='alert alert-warning text-center'>Invalid username and password</div>";
                                         }

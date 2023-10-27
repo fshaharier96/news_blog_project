@@ -1,11 +1,11 @@
 <?php
 include_once "Front_register.php";
+if(isset($_POST['search'])){
+    $search_term=$_POST['index-search'];
+}
 $reg=new Register();
- $pageId=$_GET['page'];
- $result=$reg->show1($pageId);
+$result=$reg->show4($search_term);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +14,7 @@ $reg=new Register();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
     <!-- <link rel="stylesheet" href="style/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
+    <title>Category Page</title>
 </head>
 <body>
     <?php 
@@ -23,55 +23,66 @@ $reg=new Register();
 
     <div class="index-main-container">
         <div class="index-body-container">
+        <div class="category-heading">
+           <h2> <?php echo "Search : ". $search_term; ?></h2>
+        </div>
+    <?php
+       if($result){
+        
+      
+    ?>
+       
 
-             <?php
-                 if($result){
-                    while($row=mysqli_fetch_assoc($result))
-                    {
+        <?php 
+              while($row=mysqli_fetch_assoc($result)){
 
+              
+        ?>
+          
+            <div class="index-body-item">
+               <div class="index-body-image">
+                    <img src="admin/<?php echo $row['post_image']?>" alt="news_image">
+               </div>
+               <div class="index-body-content">
                    
-             ?>
-               <div class="single-post-body-content">
-                   
-                         <h2>
+                         <h3>
                             <?php echo  $row['post_title'] ?>
-                        </h2>
-                         <div>
-                            <span>
+                        </h3>
+                <div>
+                         <span>
                                 <i class="fa-solid fa-tag"></i>
                                 <?php echo  $row['category_name'] ?>
                                 </span>
                             <span>
                                 <i class="fa-solid fa-pen-nib"></i> 
-                                <?php echo  $row['first_name']." ".$row['last_name']?>
-                            </span> 
-                            <span>
-                                <i class="fa-regular fa-calendar-days"></i>
-                                <?php echo  $row['post_date'] ?>
+                            <?php echo  $row['first_name']." ".$row['last_name']?>
+                        </span> 
+                        <span>
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <?php echo  $row['post_date'] ?>
                         </span>
-                    </div>
+                        </div>
+                         <p><?php echo $row['post_description'] ?></p>
+                         <a class="read-more" href="#">Read More</a>
                     
 
                  </div> 
-                 <div class="single-post-body-image">
-                    <img src="admin/<?php echo $row['post_image']?>" alt="news_image">
-               </div>
-               <div class="single-post-body-desc">
-               <p><?php echo $row['post_description'] ?></p>
-               </div>
+                <?php 
 
-            <?php
-                
+                      }
+                    }else{
+                        echo "<div>No records found</div>";
                     }
-                }
-            ?>
+                
+                ?>
+
+            </div>
            
-         
         </div>
 
         <!-- sidebar container starts -->
         <div class="index-sidebar-container">
-        <?php 
+         <?php 
             include_once 'sidebar_search.php';
          ?>
              <?php 

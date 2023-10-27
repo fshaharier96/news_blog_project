@@ -1,7 +1,7 @@
 <?php
  include_once "Front_register.php";
  $reg1=new Register();
- $result1=$reg->show2();
+ $result1=$reg1->show2();
         
         
         
@@ -10,7 +10,7 @@
     <div class="header-upper-container">
         <div class="header-search-container">
         <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         <p><?php echo date("d M , Y") ?></p>
         </div>
         <div class="header-heading-container">
