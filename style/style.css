@@ -418,4 +418,15 @@ table thead {
   color: rgb(26, 121, 230);
 }
 
+.post-action {
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  background: blue;
+  color: white;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

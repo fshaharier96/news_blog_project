@@ -1,5 +1,5 @@
 <?php
- $host="http://localhost/news_blog/news_blog_project_local/admin/";
+ $host="http://localhost/news_blog/news_blog_project_local/admin";
 
  define("SERVER","localhost");
  define("USER","root");

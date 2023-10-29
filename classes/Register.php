@@ -122,7 +122,7 @@
      }
 
     public function getPost(){
-        $sql="SELECT pt.post_id,pt.post_title,pt.post_date,ct.category_name,lt.first_name,lt.last_name FROM post_table pt INNER JOIN login_table lt on pt.author=lt.id INNER JOIN category ct on pt.post_category=ct.category_id";
+        $sql="SELECT pt.post_id,pt.post_title,pt.post_date,ct.category_name,lt.first_name,lt.last_name,pst.status FROM post_table pt INNER JOIN login_table lt on pt.author=lt.id INNER JOIN category ct on pt.post_category=ct.category_id INNER JOIN post_status pst on pt.status=pst.id";
         $db=new Database();
         $result=$db->select($sql);
         return $result;
@@ -149,8 +149,9 @@
             $post_image=$folder;
             $post_category=$post['category'];
             $author=$_SESSION['id'];
+            $status=1;
            
-            $sql="INSERT INTO post_table(post_title,post_description,post_date,post_image,post_category,author) VALUES('{$post_title}','{$post_description}','{$post_date}','{$post_image}',{$post_category},{$author});";
+            $sql="INSERT INTO post_table(post_title,post_description,post_date,post_image,post_category,author,status) VALUES('{$post_title}','{$post_description}','{$post_date}','{$post_image}',{$post_category},{$author},{$status});";
             $sql.="UPDATE category SET post = post + 1 WHERE category_id={$post_category}";
             $db=new Database();
             $result=$db->insertPost($sql);
@@ -168,6 +169,13 @@
         $result=$db->delete($sql);
         return $result;
      }
+     
+     public function updateStatus($post_id){
+        $sql="UPDATE post_table SET status=2 WHERE post_id={$post_id}";
+        $db=new Database();
+        $result=$db->update($sql);
+        return $result;
+ }
 
 
         public function dataCheck($sql){

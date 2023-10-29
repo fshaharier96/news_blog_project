@@ -2,7 +2,7 @@
 include_once "../classes/Register.php";
 $reg=new Register();
 $result=$reg->getPost();
-
+session_start();
 
 
 ?>
@@ -35,7 +35,14 @@ include 'admin_header.php';
                 <th>DATE</th>
                 <th>AUTHOR</th>
                 <th>EDIT</th>
-                <th>ACTION</th>
+                <th>REMOVE</th>
+                <th>STATUS</th>
+                <?php
+                 if($_SESSION['role']==1)
+                 {
+                    echo "<th>ACTION</th>";
+                 }
+                ?>
                 </tr>
 
             </thead>
@@ -54,6 +61,20 @@ include 'admin_header.php';
                 <td><?php echo $row['first_name']." ".$row['last_name']?></td>
                 <td><a href="edit_post.php?page=<?php echo $row['post_id'] ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
                 <td><a href="delete_post.php?page=<?php echo $row['post_id'] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
+                <td><?php echo $row['status']?></td>
+
+                <?php
+                   if($_SESSION['role']==1)
+                   {  
+                       $row_id=$row['post_id'];
+                      echo "<td>
+                         <a class='post-action' href='action.php?actionId=1&post-id={$row_id}'>approve</a>
+                         <a class='post-action' href='action.php?actionId=0&post-id={$row_id}'>reject</a>
+                        </td>";
+                   }
+                ?>
+
+
 
                 </tr>
                 <?php
@@ -68,6 +89,9 @@ include 'admin_header.php';
 
         </table>
     </div>
+
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
     
 </body>
 </html>

@@ -56,6 +56,13 @@ class Database{
         }
     }
 
+    public function updateStatus($post_id){
+        $sql="UPDATE post_table SET status=2 WHERE post_id={$post_id}";
+        $db=new Database();
+        $result=$db->update($sql);
+        return $result;
+ }
+
     public function __destruct(){
         mysqli_close($this->conn);
   
