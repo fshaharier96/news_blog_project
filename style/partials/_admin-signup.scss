@@ -1,0 +1,24 @@
+
+.container{
+    height:100vh;
+}
+.row{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-md-6{
+   width:450px;
+   padding:20px;
+   border-radius:5px;
+}
+
+.signup-label{
+     width:130px;
+    //  border:2px solid black;
+}
+.signup-input{
+    width:100%;
+    border-radius:5px;
+    margin-bottom:5px;
+}

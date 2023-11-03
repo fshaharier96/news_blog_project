@@ -506,4 +506,30 @@ table thead {
   border-radius: 5px;
 }
 
+.container {
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-md-6 {
+  width: 450px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.signup-label {
+  width: 130px;
+}
+
+.signup-input {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

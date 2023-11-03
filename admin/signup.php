@@ -19,40 +19,40 @@ if(isset($_POST['submit'])){
 <body>
 
   <div class="container">
-       <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-6 shadow p-4 bg-white">
-            <h2 class="text-center">Registration</h2>
+       <div class="row">
+        <div class="col-md-6 shadow bg-white">
+            <h2 class="text-center mb-3">Registration</h2>
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-                <div class="mb-3">
-                            <label  class="form-label">First Name</label>
-                            <input type="text" name="first_name" class="form-control border border-dark-subtle">
+                <div class="">
+                            <label  class="form-label signup-label">First Name</label>
+                            <input type="text" name="first_name" class=" border border-dark-subtle signup-input">
                 </div>
-                <div class="mb-3">
-                            <label  class="form-label">Last Name</label>
-                            <input type="text" name="last_name" class="form-control border border-dark-subtle">
+                <div class="">
+                            <label  class="form-label signup-label">Last Name</label>
+                            <input type="text" name="last_name" class=" border border-dark-subtle signup-input">
                 </div>
-                <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">User Role</label>
-                <select name="user_role" class="form-select border border-dark-subtle" aria-label="Default select example">
+                <div class="">
+                <label for="exampleInputEmail1" class="form-label signup-label">User Role</label>
+                <select name="user_role" class=" border border-dark-subtle signup-input" aria-label="Default select example">
                         <option value="1">admin</option>
                         <option value="2">user</option>
                 </select> 
             </div>
                 
-                <div class="mb-3">
-                    <label  class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control border border-dark-subtle">
+                <div class="">
+                    <label  class="form-label signup-label">Email address</label>
+                    <input type="email" name="email" class="border border-dark-subtle signup-input">
                 </div>
-                <div class="mb-3">
-                    <label  class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control border border-dark-subtle">
+                <div class="">
+                    <label  class="form-label signup-label">Password</label>
+                    <input type="password" name="password" class=" border border-dark-subtle signup-input">
                 </div>
-                <div class="mb-3">
-                    <label  class="form-label">Confirm Password</label>
-                    <input type="password" name="c_password" class="form-control border border-dark-subtle">
+                <div class="">
+                    <label  class="form-label signup-label">Confirm Password</label>
+                    <input type="password" name="c_password" class=" border border-dark-subtle signup-input">
                 </div>
 
-                <button type="submit" name="submit" class="btn btn-primary form-control mt-3">signup</button>
+                <button type="submit" name="submit" class="form-control btn btn-primary mt-3">signup</button>
                 <br><br>
                 <div class="text-center">Already Have an account? <a href="index.php">Log in</a></div>
                 <?php
