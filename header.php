@@ -9,7 +9,17 @@
 <div>
     <div class="header-upper-container">
         <div class="header-search-container">
-        <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars show"></i>
+          <i class="fa-solid fa-xmark hide"></i>
+        <div class="header-search-side-menu">
+            <ul>
+                <li><a href="index.php">All</a></li>
+                <li><a>Business</a></li>
+                <li><a>Sports</a></li>
+                <li><a>Entertainment</a></li>
+
+            </ul>
+        </div>
         <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         <p><?php echo date("d M , Y") ?></p>
         </div>

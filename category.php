@@ -90,6 +90,7 @@ $result=$reg->show3($cat_id);
     <scirpt src="js/bootstrap.min.js"></scirpt>
     <script src="js/popper.min.js"></script>
     <script src="js/app.js"></script>
+    
 </body>
 </html>
     
