@@ -9,3 +9,9 @@ $('.hide').click(function(){
     $('.hide').hide();
     $('.show').show();
 })
+
+// bell-icon js code
+
+$('#bell-id').click(function(){
+     $(".header-bell-container").toggle();  
+})

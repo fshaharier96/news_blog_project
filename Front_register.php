@@ -39,6 +39,13 @@
             $result=$db->select($sql);
             return $result;
       }
+      public function show_bell_item(){
+        $sql="SELECT * FROM post_table ORDER BY post_id DESC LIMIT 5";
+        $db=new Database();
+        $result=$db->select($sql);
+        return $result;
+
+      }
   }
 
 ?>
