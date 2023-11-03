@@ -2,9 +2,8 @@
  include_once "Front_register.php";
  $reg1=new Register();
  $result1=$reg1->show2();
-        
-        
-        
+ $result2=$reg1->show2();
+           
 ?>
 <div>
     <div class="header-upper-container">
@@ -12,13 +11,26 @@
           <i class="fa-solid fa-bars show"></i>
           <i class="fa-solid fa-xmark hide"></i>
         <div class="header-search-side-menu">
-            <ul>
-                <li><a href="index.php">All</a></li>
-                <li><a>Business</a></li>
-                <li><a>Sports</a></li>
-                <li><a>Entertainment</a></li>
+        <ul>
+        <li>
+            <a href="index.php">All</a>
+        </li>
+        <?php 
+        if($result2){
+            while($row2=mysqli_fetch_assoc($result2)){
+        
+           ?>
+             <li>
+                <a href="category.php?cat_page=<?php echo $row2["category_id"];?>&cat_name=<?php echo $row2["category_name"];?>"><?php echo $row2['category_name'] ?>
+               </a>
+        </li>
+    
+        <?php
+         }
+        }
+        ?>
 
-            </ul>
+         </ul>
         </div>
         <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         <p><?php echo date("d M , Y") ?></p>
