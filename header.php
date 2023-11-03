@@ -27,6 +27,8 @@
     </div>
    
     <div class="header-menu-container">
+    <ul class="header-list-container">
+        <li><a href="index.php">All</a></li>
     <?php
          if($result1){
             while($row1=mysqli_fetch_assoc($result1)){
@@ -34,16 +36,17 @@
            
         ?>
    
-        <ul class="header-list-container">
+       
             <li>
                 <a href="category.php?cat_page=<?php echo $row1["category_id"];?>&cat_name=<?php echo $row1["category_name"];?>"><?php echo $row1['category_name'] ?>
             </a>
         </li>
-        </ul>
+       
 
         <?php
          }
         }
         ?>
+         </ul>
     </div>
 </div>
