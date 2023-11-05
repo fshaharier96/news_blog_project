@@ -2,7 +2,6 @@
 include_once "../classes/Register.php";
 $reg=new Register();
 $result=$reg->getPost();
-session_start();
 
 
 ?>

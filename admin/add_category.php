@@ -21,8 +21,8 @@ if(isset($_POST['submit'])){
 <?php
 include 'admin_header.php';
 ?>
-<div class="container">
-    <div class="row">
+<div class="container ">
+    <div class="row d-flex align-items-start mt-5">
         <div class="col-md-6 shadow p-4 bg-white mx-auto">
             <h3 class="text-center">Create Category</h3>
             <form class="form" action="<?php $_SERVER['PHP_SELF']?>" method="post">
