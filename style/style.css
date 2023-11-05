@@ -334,6 +334,12 @@ body {
   height: 35px;
 }
 
+.index-pagination li .index-pagination-pn {
+  display: inline-flex;
+  width: 40px;
+  height: 35px;
+}
+
 .admin-header-upper-container {
   height: 110px;
   background: linear-gradient(to right, rgb(14, 77, 155), rgb(48, 132, 221));

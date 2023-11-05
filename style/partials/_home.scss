@@ -136,6 +136,7 @@
 .index-pagination li {
     list-style-type:none;
     margin-left:5px;
+    
 }
 .index-pagination li a{
     text-decoration:none;
@@ -146,4 +147,11 @@
     color:white;
     width:35px;
     height:35px;
+    
+}
+.index-pagination li .index-pagination-pn{
+   display:inline-flex;
+   width:40px;
+   height:35px;
+   
 }

@@ -2,7 +2,7 @@
 include_once "Front_register.php";
 
 $reg=new Register();
-$limit_per_page=2;
+$limit_per_page=3;
 
 if(isset($_GET['page'])){
     $page=$_GET['page'];
@@ -84,21 +84,33 @@ if($result)
             <div class="index-pagination-box">
                <?php
                     $conn=mysqli_connect(SERVER,USER,PASSWORD,DATABASE) or die("connection failed");
-                    $sql="SELECT * FROM post_table";
-                    $result1=mysqli_query($conn,$sql) or die("query unsuccessfull");
-                    echo ' <ul class="index-pagination"> ';
-                    if(mysqli_num_rows($result)>0)
+                    $sql1="SELECT * FROM post_table";
+                    $result1=mysqli_query($conn,$sql1) or die("query unsuccessfull");
+                    
+                    
+                
+                    if(mysqli_num_rows($result1)>0)
                     {
-                        $total_records=mysqli_num_rows($result);
+                        $total_records=mysqli_num_rows($result1);
                         $pages=ceil($total_records/$limit_per_page);
+                        echo ' <ul class="index-pagination"> ';
+                        if($page>1){
+                            echo '<li><a class="index-pagination-pn" href="index.php?page='.($page-1).'">Prev</a></li>';
+                        }
+
                     
                         for($i=1;$i<=$pages;$i++)
                         {
                            echo '<li><a href="index.php?page='.$i.'">'.$i.'</a></li>';
                         }
-                       
+
+                        if($pages>$page){
+                            echo '<li><a class="index-pagination-pn" href="index.php?page='.($page+1).'">Next</a></li>';
+                            }
                               
                     }
+                   
+                    
                     echo "</ul>";
 
                     ?>
