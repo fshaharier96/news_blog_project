@@ -64,7 +64,14 @@ if($result)
                           </span>
                           
                     </div>
-                         <p><?php echo $row['post_description'] ?></p>
+                         <p>
+                            <?php
+                             $index_des= $row['post_description'];
+                             $index_des_wrap=substr($index_des,0,125);
+                              echo $index_des_wrap."...";
+                              ?>
+                        
+                        </p>
                          <a class="read-more" href="single_post.php?page=<?php echo  $row['post_id'] ?>">Read More</a>
                     
 
