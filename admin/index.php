@@ -13,6 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <title>Document</title>
@@ -37,6 +38,7 @@
                 <div class="my-3 text-center fs-6">
                     <span>Don't you have any account? </span><a class="text-decoration-none" href="signup.php">Create new here.</a>
                 </div>
+                
                 <?php
                                     if(isset($_POST["submit"])){
                                         $result=$reg->loginData($_POST);
@@ -56,7 +58,15 @@
 
                     ?>
         </div>
+        <div class="admin-index-gb-container">
+                 <a href="http://localhost/news_blog/news_blog_project_local">Go back to front 
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-house gb-home"></i>
+                </a>
+        </div>
+
        </div>
+       
   </div>
   <script>
       if(window.history.replaceState){

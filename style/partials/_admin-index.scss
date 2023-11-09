@@ -1,0 +1,24 @@
+.admin-index-gb-container{
+  text-align: center;
+  
+}
+.admin-index-gb-container a{
+  color:black;
+  text-decoration:none;
+}
+.admin-index-gb-container a:hover{
+  color:#0B5ED7;
+}
+.admin-index-gb-container a .gb-home{
+    height:30px;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    // border:1px solid black;
+    border-radius:50%;
+    color:#0B5ED7;
+    background:white;
+    box-shadow: 0px 0px 5px #0B5ED7; 
+    margin:0px 8px;
+}
