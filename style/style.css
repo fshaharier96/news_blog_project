@@ -418,14 +418,26 @@ body {
 
 .user-container {
   width: 90%;
-  border: 2px solid black;
   margin: 0px auto;
+  background: white;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .user-table-header {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
+}
+
+.user-table-header h2 {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .user-table-header a {
@@ -435,12 +447,14 @@ body {
   padding: 0px 8px;
   padding-top: 4px;
   text-align: center;
-  color: rgb(48, 132, 221);
+  color: white;
   border-radius: 5px;
   font-size: 20px;
-  background: white;
+  background: rgb(48, 132, 221);
   border: none;
-  font-weight: bold;
+  font-weight: 500;
+  text-transform: lowercase;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 table {
@@ -448,7 +462,7 @@ table {
 }
 
 table tr {
-  border-bottom: 1.8px solid black;
+  border-bottom: 1px solid gray;
   width: 100%;
 }
 
@@ -529,7 +543,7 @@ table thead {
   text-decoration: none;
   display: inline-block;
   margin: 5px;
-  background: blue;
+  background: #10509F;
   color: white;
   height: 35px;
   padding: 5px;

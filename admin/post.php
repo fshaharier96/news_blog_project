@@ -22,7 +22,7 @@ include 'admin_header.php';
 
 <div class="user-container">
         <div class="user-table-header">
-            <h2>All Post</h2>
+            <h2>ALL POST</h2>
             <a href="add_post.php">Add Post</a>
         </div>
         <table class="user-table">
