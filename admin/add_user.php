@@ -24,16 +24,16 @@
         <form action="<?php  $_SERVER['PHP_SELF'];?>" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label user-label-style">First Name</label>
-                <input type="text"  name="first_name" class="form-control border border-black" placeholder="First Name">   
+                <input type="text"  name="first_name" class="form-control border border-secondary" placeholder="First Name">   
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label user-label-style">Last Name</label>
-                <input type="text" name="last_name" class="form-control border border-black" placeholder="Last Name">   
+                <input type="text" name="last_name" class="form-control border border-secondary" placeholder="Last Name">   
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label user-label-style">User Role</label>
-                <select name="user_role" class="form-select border border-black" aria-label="Default select example">
+                <select name="user_role" class="form-select border border-secondary" aria-label="Default select example">
                         <option value="1">admin</option>
                         <option value="2">user</option>
                 </select> 
@@ -42,11 +42,11 @@
 
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label user-label-style">User Email</label>
-                <input type="email" name="email" class="form-control border border-black" placeholder="User Name">   
+                <input type="email" name="email" class="form-control border border-secondary" placeholder="User Name">   
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label user-label-style">Password</label>
-                <input type="text" name="password" class="form-control border border-black" placeholder="Password">   
+                <input type="text" name="password" class="form-control border border-secondary" placeholder="Password">   
             </div>
 
             
