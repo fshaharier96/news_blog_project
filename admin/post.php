@@ -58,7 +58,7 @@ include 'admin_header.php';
                 <td><?php echo $row['category_name']?></td>
                 <td><?php echo $row['post_date']?></td>
                 <td><?php echo $row['first_name']." ".$row['last_name']?></td>
-                <td><a href="edit_post.php?page=<?php echo $row['post_id'] ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td><a href="update_post.php?page=<?php echo $row['post_id'] ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
                 <td><a href="delete_post.php?page=<?php echo $row['post_id'] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
                 <td><?php echo $row['status']?></td>
 

@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
            
 
             <div class="mb-3">
-                <label  class="form-label user-label-style">User Role</label>
+                <label  class="form-label user-label-style">Category</label>
                 <select name="category" class="form-select border border-secondary">
                         <option disabled>select category</option>
                         <?php
