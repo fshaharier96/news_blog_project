@@ -127,6 +127,13 @@
         $result=$db->select($sql);
         return $result;
     }
+    public function postForUpdate($update_id){
+        $sql="SELECT pt.post_id,pt.post_title,pt.post_description,pt.post_category,pt.post_date,pt.post_image,ct.category_name,lt.first_name,lt.last_name FROM post_table pt INNER JOIN login_table lt on pt.author=lt.id INNER JOIN category ct on pt.post_category=ct.category_id WHERE pt.post_id={$update_id}";
+        $db=new Database();
+        $result=$db->select($sql);
+        return $result;
+
+    }
 
      public function addPost($post,$file){
          if(!empty($post['title']) && !empty($post['description']) && !empty($post['category']) && !empty($file['image'])){
@@ -163,6 +170,43 @@
          }
      }
 
+     public function updatePost($post,$file){
+         $post_id=$post['id'];
+         $post_title=$post['title'];
+         $post_description=$post['description'];
+         $post_category=$post['category'];
+         $img_extension=['jpg','jpeg','png'];
+         $post_image=$post['old_image'];
+
+
+         
+    //    if(isset($file['image'])){
+    //     $post_image=$file['image'];
+    //     $file_name=$post_image['name'];
+    //     $file_tempName=$post_image['tmp_name'];
+    //     $extension_arr=explode('.',$file_name);
+    //     $extension_name=end($extension_arr);
+         
+
+    //     $post_image="uploads/".$file_name;
+    //     if(in_array($extension_name,$img_extension)){
+    //         move_uploaded_file($file_tempName,$post_image);
+    //     }
+    //     else{
+    //         return $extension_name;
+    //     }
+    
+    //   }
+    
+      $sql="UPDATE post_table SET post_title='{$post_title}', post_description='{$post_description}', post_category={$post_category},post_image='{$post_image}' WHERE post_id={$post_id}";
+
+        $db=new Database();
+        $result=$db->update($sql);
+        return $result;
+    
+
+     }
+
      public function delPost($post_id){
         $sql="DELETE FROM post_table WHERE post_id='{$post_id}'";
         $db=new Database();
@@ -192,3 +236,4 @@
   }
 
 ?>
+                                                     

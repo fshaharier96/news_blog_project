@@ -602,4 +602,10 @@ table thead {
   margin: 0px 8px;
 }
 
+.update-post-image {
+  width: 250px;
+  height: 150px;
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

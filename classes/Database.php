@@ -56,6 +56,17 @@ class Database{
         }
     }
 
+    public function update($sql){
+        $result=mysqli_query($this->conn,$sql) or die("query unsuccessfull");
+        if($result){
+            // return "query successful";
+              return $result;
+        }else{
+            // return "query failed";
+            return false;
+        }
+    }
+
     public function updateStatus($post_id){
         $sql="UPDATE post_table SET status=2 WHERE post_id={$post_id}";
         $db=new Database();
